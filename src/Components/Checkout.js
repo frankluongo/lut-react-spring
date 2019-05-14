@@ -1,14 +1,7 @@
-import React, { useState} from 'react'
+import React from 'react'
 import { useSpring, animated } from 'react-spring';
 
 const Checkout = ({ isOpen }) => {
-  // const animationRight = useSpring({
-  //   transform: isOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`
-  // });
-  // const animationLeft = useSpring({
-  //   transform: isOpen ? `translate3d(0,0,0)` : `translate3d(-100%,0,0)`
-  // });
-
   const { x } = useSpring({
     x: isOpen ? 0 : 100
   });
