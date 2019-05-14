@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import logo from './logo.svg';
 import Toggle from './Components/Toggle';
-import Nav from './Components/Nav';
+// import Nav from './Components/Nav';
+import Checkout from './Components/Checkout'
+
 
 import './App.css';
 
@@ -22,10 +24,13 @@ const Application = () => {
           className="menu-button">{
             isNavOpen ? 'Close' : 'Menu'
           }</button>
-        <Nav style={navAnimation} />
+        {/* <Nav style={navAnimation} /> */}
       </header>
       <main>
         <Toggle />
+        <Checkout
+          isOpen={isNavOpen}
+        />
       </main>
     </animated.div>
   );
