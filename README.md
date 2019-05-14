@@ -41,6 +41,7 @@ const Toggle = () => {
 export default Toggle;
 ```
 
+
 ## 5 Animating Properties
 ```jsx
   const fade = useSpring({
@@ -49,4 +50,39 @@ export default Toggle;
     fontSize: isToggled ? '1rem' : '3em',
     transform: isToggled ? 'translate3d(0,0,0)' : 'translate3d(0, -50px, 0)'
   });
+```
+
+
+## 11 Transition With Multiple Components
+```jsx
+const Toggle = () => {
+  const [items, setItems] = useState([
+    {letter: "S",key: 1 },
+    {letter: "c",key: 2},
+    {letter: "o",key: 3},
+    {letter: "t",key: 4},
+    {letter: "t",key: 5},
+  ]);
+  const transition = useTransition(items, item => item.key, {
+    from: { opacity: 0 },
+    enter: { opacity: 1},
+    leave: { opacity: 0}
+  });
+
+  return (
+    <div>
+      {transition.map(({ item, key, props }) => (
+        <animated.h1 key={key} style={props}>
+          {item.letter}
+        </animated.h1>
+      ))}
+      <button onClick={() => setItems([
+        {
+          letter: "S",
+          key: 1
+        }
+      ])}>Toggle</button>
+    </div>
+  )
+}
 ```
