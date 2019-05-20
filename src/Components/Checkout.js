@@ -24,10 +24,3 @@ const Checkout = ({ isOpen }) => {
 }
 
 export default Checkout
-
-/*
-    config: {
-      tension: 500,
-      friction: 1,
-    }
-*/

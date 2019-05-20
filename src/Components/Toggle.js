@@ -4,26 +4,11 @@ import { useTransition, animated } from 'react-spring';
 
 const Toggle = () => {
   const [items, setItems] = useState([
-    {
-    letter: "S",
-    key: 1
-    },
-    {
-    letter: "c",
-    key: 2
-    },
-    {
-    letter: "o",
-    key: 3
-    },
-    {
-    letter: "t",
-    key: 4
-    },
-    {
-    letter: "t",
-    key: 5
-    },
+    { letter: "S", key: 1 },
+    { letter: "c", key: 2 },
+    { letter: "o", key: 3 },
+    { letter: "t", key: 4 },
+    { letter: "t", key: 5 },
   ]);
   const transition = useTransition(items, item => item.key, {
     from: { opacity: 0 },
