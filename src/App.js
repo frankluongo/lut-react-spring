@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import Checkout from './Components/Checkout'
 import Modal from './Components/Modal'
 import Accordion from './Components/Accordion';
-import Waypoints from './Components/Waypoints';
+import Box from './Components/Box';
 
 
 import './App.css';
@@ -29,7 +29,7 @@ const Application = () => {
         />
         <Modal />
         <Accordion />
-        <Waypoints />
+        <Box />
       </main>
     </animated.div>
   );
