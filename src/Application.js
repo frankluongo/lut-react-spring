@@ -6,7 +6,7 @@ import Modal from './Components/Modal'
 import Accordion from './Components/Accordion';
 // import Box from './Components/Box';
 // import Boxes from './Components/Boxes';
-import TrailBoxes from './Components/TrailBoxes';
+import ChainedBoxes from './Components/ChainedBoxes';
 
 
 import './App.css';
@@ -32,7 +32,7 @@ const Application = () => {
         <Modal />
         <Accordion />
         {/* <Box /> */}
-        <TrailBoxes />
+        <ChainedBoxes />
       </main>
     </animated.div>
   );
